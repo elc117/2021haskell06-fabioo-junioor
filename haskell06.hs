@@ -2,9 +2,15 @@
 -- Nome: Fabio Junior
 
 {-1 Escreva uma função ends :: [Int] -> [Int] que receba uma lista e retorne outra lista contendo o primeiro e o último elementos da primeira lista. Use o operador de construção de lista (:).-}
+ends :: [Int] -> [Int] 
+ends [x] = [x]
+ends (x:xs) = x : [last xs]
 
 
 {-2 Reescreva a função deduzame do Aquecimento usando a notação (x:xs) para representar a lista lst. Ajuste o restante do código da função. Você verá que o código ficará mais enxuto.-}
+deduzame :: [Integer] -> [Integer]
+deduzame [] = []
+deduzame (x:xs) = (2 * x) : deduzame (xs)
 
 
 {-3 Reescreva também a função deduzame2 do Aquecimento, usando a notação (x:xs) para representar a lista lst.-}
